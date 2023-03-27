@@ -31,9 +31,9 @@ const restaurant ={
             close:22,
         },
     },
-    order:function(starterIndex, mainIndex){
-        return [this.startMenu[starterIndex], this.mainMenu[mainIndex]];
-    }
+   order:function(staterIndex, mainIndex){
+    return [this.startMenu[staterIndex], this.mainMenu[mainIndex]];
+   }
 
 }
 
@@ -69,5 +69,13 @@ console.log(first, second);
 
 console.log(main, secondary);
 
-    let [firstOrder, secondOrder] = restaurant.order(0,0)
+    let [firstOrder, secondOrder] = restaurant.order(1,2)
+
+   
     console.log(firstOrder, secondOrder);
+
+    // Nested Destructuring
+    let friendsList = ['sabuj', 'sakib' , ['ripon' , 'rakib '], 'arpi']
+
+    let [f1,f2,[f3,f4],f5] = friendsList;
+    console.log(f1,f2,f3,f4,f5);
