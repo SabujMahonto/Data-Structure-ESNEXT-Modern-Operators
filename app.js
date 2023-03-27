@@ -30,7 +30,9 @@ const restaurant ={
             open:11,
             close:22,
         },
-
+    },
+    order:function(starterIndex, mainIndex){
+        return [this.startMenu[starterIndex], this.mainMenu[mainIndex]];
     }
 
 }
@@ -46,9 +48,26 @@ console.log(a, b, c);
 const [x,y,z] = arr;
 console.log(x,y,z);
 
-const [main, , , secondary] = restaurant.categories;
+let [main, , , secondary] = restaurant.categories;
 console.log(main, secondary);
 
 const [food1, , , food2]= restaurant.mainMenu;
 
 console.log(food1, food2);
+
+// switching variable
+let first = 20;
+let second = 30;
+// let temp = first;
+// first = second;
+// second =temp;
+[first,second] = [second, first];
+console.log(first, second);
+
+
+[main, secondary] = [secondary, main]
+
+console.log(main, secondary);
+
+    let [firstOrder, secondOrder] = restaurant.order(0,0)
+    console.log(firstOrder, secondOrder);
