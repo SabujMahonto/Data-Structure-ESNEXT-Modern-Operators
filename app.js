@@ -95,3 +95,8 @@ console.log(name, strMenu);
 const {sun:sunday, fri:friday} = restaurant.openingHours;
 
 console.log(sunday, friday);
+
+// mutating variable 
+const obj = {a:20,b:30};
+({a,b}= obj);
+console.log(a, b);
