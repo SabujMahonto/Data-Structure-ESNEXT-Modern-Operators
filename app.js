@@ -79,3 +79,8 @@ console.log(main, secondary);
 
     let [f1,f2,[f3,f4],f5] = friendsList;
     console.log(f1,f2,f3,f4,f5);
+
+    // default values
+   const newArr = [20, 40];
+   const [p, q, r=1, w=2] = newArr;
+   console.log(p, q, r, w);
