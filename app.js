@@ -100,3 +100,18 @@ console.log(sunday, friday);
 const obj = {a:20,b:30};
 ({a,b}= obj);
 console.log(a, b);
+
+// nested Object 
+const sabuj = {
+    friends :{
+        first:"shohag",
+
+        second:"ripon",
+    },
+};
+
+const {first,second} = sabuj.friends;
+// const  {friends: {first,second}} = sabuj;
+console.log(first, second);
+
+
