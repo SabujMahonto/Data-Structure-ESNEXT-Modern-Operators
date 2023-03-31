@@ -39,6 +39,9 @@ const restaurant ={
           console.log(`${this.startMenu[staterIndex]} ${this.mainMenu[mainIndex]} ${address} ${time}`);  
 
  },
+ bergerOrder:function(item1, item2, item3){
+    console.log(`Delicious deist ready to ${item1}, ${item2}, ${item3} . Boom!`);
+ }
 
 }
 
@@ -94,7 +97,7 @@ const restaurant ={
 //    console.log(p, q, r, w);
 
 
-// Destructuring Object
+// * Destructuring Object
 
 const {restaurantName : name, startMenu: strMenu} = restaurant;
 
@@ -104,12 +107,12 @@ const {sun:sunday, fri:friday} = restaurant.openingHours;
 
 console.log(sunday, friday);
 
-// mutating variable 
+//*  mutating variable 
 const obj = {a:20,b:30};
 ({a,b}= obj);
 console.log(a, b);
 
-// nested Object 
+//*  nested Object 
 const sabuj = {
     friends :{
         first:"shohag",
@@ -129,26 +132,38 @@ restaurant.deliveryOrder({
     time: "9.00 pm"
 })
 
-restaurant.deliveryOrder({
-    staterIndex:3,
-    mainIndex:0,
-    address:"Dhaka,BD",
-    time:"9.00 am"
-})
+// restaurant.deliveryOrder({
+//     staterIndex:3,
+//     mainIndex:0,
+//     address:"Dhaka,BD",
+//     time:"9.00 am"
+// })
 
-// SpreedOperator
+//*  SpreedOperator
 const arr3 = [33,44,55,];
 // const badArrCopy = [11,22,arr3[0],arr3[1],arr3[2]];
-const goodArrCopy = [88,99,...arr3]
-console.log(goodArrCopy);
+// const goodArrCopy = [88,99,...arr3]
+// console.log(goodArrCopy);
 
-const newMainMenu = [...restaurant.mainMenu, "loodles"];
-console.log(newMainMenu);
+// const newMainMenu = [...restaurant.mainMenu, "loodles"];
+// console.log(newMainMenu);
 
-// Copy array
-const mainMenuCopy = [...restaurant.mainMenu];
-console.log(mainMenuCopy);
-// Join array
-const allFoods = [...restaurant.mainMenu,...restaurant.startMenu];
-console.log(allFoods);
+// * Copy array
+// const mainMenuCopy = [...restaurant.mainMenu];
+// console.log(mainMenuCopy);
+// *  Join array
+// const allFoods = [...restaurant.mainMenu,...restaurant.startMenu];
+// console.log(allFoods);
+
+// * //iterable array, string, maps, sets, ! not object
+const gameName = "call of duty: modern Warfare";
+
+console.log(...gameName, " " ,"2023");
+
+
+const ingredient = ["Tomato", "Chicken", "lettuce"];
+
+// restaurant.bergerOrder(ingredient[0],ingredient[1],ingredient[2]);
+restaurant.bergerOrder(...ingredient);
+
 
