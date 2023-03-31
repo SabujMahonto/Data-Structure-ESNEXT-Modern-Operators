@@ -32,10 +32,18 @@ const restaurant ={
         },
     },
    order:function(staterIndex, mainIndex){
-    return [this.startMenu[staterIndex], this.mainMenu[mainIndex]];
-   }
+            return [this.startMenu[staterIndex], this.mainMenu[mainIndex]];
+
+ },
+ deliveryOrder:function({staterIndex = 0, mainIndex = 0 ,address  = "unknown", time ="10.00 am"}){
+          console.log(`${this.startMenu[staterIndex]} ${this.mainMenu[mainIndex]} ${address} ${time}`);  
+
+ },
 
 }
+
+
+
 
 // //Destructuring Array
 // const arr = [1, 2, 3];
@@ -114,4 +122,33 @@ const {first,second} = sabuj.friends;
 // const  {friends: {first,second}} = sabuj;
 console.log(first, second);
 
+restaurant.deliveryOrder({
+    staterIndex:2,
+    mainIndex:2,
+    address:"Uttora,Dhaka",
+    time: "9.00 pm"
+})
+
+restaurant.deliveryOrder({
+    staterIndex:3,
+    mainIndex:0,
+    address:"Dhaka,BD",
+    time:"9.00 am"
+})
+
+// SpreedOperator
+const arr3 = [33,44,55,];
+// const badArrCopy = [11,22,arr3[0],arr3[1],arr3[2]];
+const goodArrCopy = [88,99,...arr3]
+console.log(goodArrCopy);
+
+const newMainMenu = [...restaurant.mainMenu, "loodles"];
+console.log(newMainMenu);
+
+// Copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+console.log(mainMenuCopy);
+// Join array
+const allFoods = [...restaurant.mainMenu,...restaurant.startMenu];
+console.log(allFoods);
 
