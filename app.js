@@ -167,3 +167,15 @@ const ingredient = ["Tomato", "Chicken", "lettuce"];
 restaurant.bergerOrder(...ingredient);
 
 
+// * rest pattern and parameter 
+// for array 
+const arr4 = [1,3,...[2,5,4,9]];
+ ([a, b, c,...other] = [66, 22,33,88,99,76])
+// console.log(a,b,c,other);
+
+const [firstChoice, , secondChoice,...otherFood] = [...restaurant.mainMenu, ...restaurant.startMenu];
+// console.log(firstChoice,secondChoice,otherFood);
+
+// for object 
+const {sun:sunday2,...othersDays} =restaurant.openingHours;
+console.log(sunday2, othersDays);
