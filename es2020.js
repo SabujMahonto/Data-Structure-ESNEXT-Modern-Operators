@@ -85,3 +85,12 @@ console.log(20 && true && "hello" && undefined);
 //     restaurant.orderPizza("masrums", "onioun", "tomato")
 // }
 restaurant.orderPizza && restaurant.orderPizza("masrums", "onioun", "tomato");
+
+
+
+
+// Nullish coalescing operator
+// nullish values : Null or undefined   || o or "" are not nullish values
+restaurant.guest = 0;
+const guest3 = restaurant.guest ?? 39;
+console.log(guest3);
