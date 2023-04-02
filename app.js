@@ -41,6 +41,10 @@ const restaurant ={
  },
  bergerOrder:function(item1, item2, item3){
     console.log(`Delicious deist ready to ${item1}, ${item2}, ${item3} . Boom!`);
+ }, 
+ orderPizza:function(mainItem, ...otherItems){
+    console.log(mainItem);
+    console.log(otherItems);
  }
 
 }
@@ -158,13 +162,13 @@ const arr3 = [33,44,55,];
 // * //iterable array, string, maps, sets, ! not object
 const gameName = "call of duty: modern Warfare";
 
-console.log(...gameName, " " ,"2023");
+// console.log(...gameName, " " ,"2023");
 
 
 const ingredient = ["Tomato", "Chicken", "lettuce"];
 
 // restaurant.bergerOrder(ingredient[0],ingredient[1],ingredient[2]);
-restaurant.bergerOrder(...ingredient);
+// restaurant.bergerOrder(...ingredient);
 
 
 // * rest pattern and parameter 
@@ -178,7 +182,7 @@ const [firstChoice, , secondChoice,...otherFood] = [...restaurant.mainMenu, ...r
 
 // *1. for object 
 const {sun:sunday2,...othersDays} =restaurant.openingHours;
-console.log(sunday2, othersDays);
+// console.log(sunday2, othersDays);
 //* function
 // rest parameter or function slot
 const add = function(...numbers){
@@ -192,3 +196,5 @@ const add = function(...numbers){
 const add2 = [1,23,4,2,45,]
 add(12,12, 11, 11)
 add(...add2)
+
+restaurant.orderPizza("masrum", "onioun", "egge")
