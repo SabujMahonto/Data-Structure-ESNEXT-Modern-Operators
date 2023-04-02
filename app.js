@@ -168,7 +168,7 @@ restaurant.bergerOrder(...ingredient);
 
 
 // * rest pattern and parameter 
-// for array 
+//* for array 
 const arr4 = [1,3,...[2,5,4,9]];
  ([a, b, c,...other] = [66, 22,33,88,99,76])
 // console.log(a,b,c,other);
@@ -176,6 +176,19 @@ const arr4 = [1,3,...[2,5,4,9]];
 const [firstChoice, , secondChoice,...otherFood] = [...restaurant.mainMenu, ...restaurant.startMenu];
 // console.log(firstChoice,secondChoice,otherFood);
 
-// for object 
+// *1. for object 
 const {sun:sunday2,...othersDays} =restaurant.openingHours;
 console.log(sunday2, othersDays);
+//* function
+// rest parameter or function slot
+const add = function(...numbers){
+    let sum = 0;
+    for(let i = 0; i<numbers.length; i++){
+        sum += numbers[i];
+    }
+    console.log(sum);
+}
+
+const add2 = [1,23,4,2,45,]
+add(12,12, 11, 11)
+add(...add2)
