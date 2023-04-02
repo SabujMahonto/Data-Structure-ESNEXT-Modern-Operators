@@ -89,8 +89,34 @@ restaurant.orderPizza && restaurant.orderPizza("masrums", "onioun", "tomato");
 
 
 
-// Nullish coalescing operator
+// *Nullish coalescing operator
 // nullish values : Null or undefined   || o or "" are not nullish values
 restaurant.guest = 0;
 const guest3 = restaurant.guest ?? 39;
-console.log(guest3);
+// console.log(guest3);
+
+// * Logical assignment operator
+const rest1 = {
+    resName : "Pizza club",
+    owner : "Sabuj Mahonto",
+
+}
+const rest2 = {
+    resName:"burger shop",
+    guest : 0,
+}
+rest2.guest =  rest2.guest || 10
+console.log(rest2.guest);
+
+// rest1.owner ||= "somir";
+// rest2.guest ||= 10;
+
+// rest1.owner ??= "somir";
+// rest2.guest ??= 10;
+
+// rest1.owner = rest1.owner && "tumpa";
+rest1.owner &&= "Arpita"
+
+
+console.log(rest1.owner);
+// console.log(rest2.guest);
