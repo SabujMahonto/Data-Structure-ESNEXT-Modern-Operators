@@ -70,3 +70,18 @@ for(const [i,friend] of friendEntry){
     console.log(`${i + 1} : ${friend}`);
 }
  
+// // optional chaining
+// console.log(restaurant?.openingHours?.san?.open);
+// console.log(restaurant.openingHours?.mon?.open);
+// console.log(restaurant.openingHours?.fri?.open);
+
+const day = ["sun", "sat", "mon", "wed", "ths", "tue", "fri"];
+
+for(const days of day){
+  const open = restaurant.openingHours[days]?.open || "offday" 
+  
+    console.log(`on ${days} we are avalivel  ${open}`);
+}
+
+console.log(restaurant?.order?.(1,1));
+console.log(restaurant?.orderPasta?.(0,1));
