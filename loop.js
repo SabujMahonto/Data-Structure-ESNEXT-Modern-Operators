@@ -107,3 +107,18 @@ console.log(entries);
 for(const [key, values] of entries){
     console.log(`on ${key} day we are open at ${values.open} and close at ${values.close} `);
 }
+
+// * Object method set
+const foods = new Set(["pizza", "burger", "pizza", "pusta", "pizza", "fazida"]);
+console.log(foods);
+console.log(foods.size);
+console.log(foods.has("pizza"));
+foods.add("mango")
+foods.delete("pizza")
+// foods.clear()
+console.log(foods);
+const arr2 = [10, 20,30,10,20,30,30,20,10,40,50,11,40,];
+const unicqArr = [...new Set(arr2)];
+console.log(unicqArr);
+
+//  * Array method map
