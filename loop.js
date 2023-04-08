@@ -48,6 +48,7 @@ const restaurant ={
  }
 
 }
+//?Array 
 // *for loop 
 const arr = [1,3,4,5,67,8];
 for(let i = 0; i < arr.length; i++){
@@ -55,7 +56,7 @@ for(let i = 0; i < arr.length; i++){
 }
 // *for of loop 
 for(const numbers of arr){
-    console.log(numbers);
+    // console.log(numbers);
 }
 
 const menu = [...restaurant.mainMenu, ...restaurant.startMenu];
@@ -67,10 +68,10 @@ for(const [i,foods] of menu.entries()){
 const friends = ["Abus", "karim", "rahim", "jorin", "sabuj"]
 const friendEntry = friends.entries();
 for(const [i,friend] of friendEntry){
-    console.log(`${i + 1} : ${friend}`);
+    // console.log(`${i + 1} : ${friend}`);
 }
  
-// // optional chaining
+// //* optional chaining
 // console.log(restaurant?.openingHours?.san?.open);
 // console.log(restaurant.openingHours?.mon?.open);
 // console.log(restaurant.openingHours?.fri?.open);
@@ -80,8 +81,29 @@ const day = ["sun", "sat", "mon", "wed", "ths", "tue", "fri"];
 for(const days of day){
   const open = restaurant.openingHours[days]?.open || "offday" 
   
-    console.log(`on ${days} we are avalivel  ${open}`);
+    // console.log(`on ${days} we are avalivel  ${open}`);
 }
 
-console.log(restaurant?.order?.(1,1));
-console.log(restaurant?.orderPasta?.(0,1));
+// console.log(restaurant?.order?.(1,1));
+// console.log(restaurant?.orderPasta?.(0,1));
+
+//* looping Object 
+// property , Name , (Key)
+const properties = Object.keys(restaurant.openingHours);
+console.log(properties);
+for(const day of properties){
+    console.log(day);
+}
+
+//Property values
+const values = Object.values(restaurant.openingHours);
+console.log(values);
+for(const day of values){
+    console.log(day);
+}
+// property entries , (key , values)
+const entries = Object.entries(restaurant.openingHours);
+console.log(entries);
+for(const [key, values] of entries){
+    console.log(`on ${key} day we are open at ${values.open} and close at ${values.close} `);
+}
