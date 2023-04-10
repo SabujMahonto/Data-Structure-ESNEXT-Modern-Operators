@@ -110,15 +110,29 @@ for(const [key, values] of entries){
 
 // * Object method set
 const foods = new Set(["pizza", "burger", "pizza", "pusta", "pizza", "fazida"]);
-console.log(foods);
-console.log(foods.size);
-console.log(foods.has("pizza"));
-foods.add("mango")
-foods.delete("pizza")
+// console.log(foods);
+// console.log(foods.size);
+// console.log(foods.has("pizza"));
+// foods.add("mango")
+// foods.delete("pizza")
 // foods.clear()
-console.log(foods);
+// console.log(foods);
 const arr2 = [10, 20,30,10,20,30,30,20,10,40,50,11,40,];
 const unicqArr = [...new Set(arr2)];
-console.log(unicqArr);
+// console.log(unicqArr);
 
 //  * Array method map
+const rest = new Map()
+rest.set("name","Pizza Hutt");
+rest.set(1,"Dhaka");
+rest.set(1, "Chatagong")
+rest.set("catagories",["pizzarian","vagiteriyan","Italian"]).set("open",10).set("close", 22).set(true,"we are open").set(false,"we are closed")
+console.log(rest);
+console.log(rest.get("name"));
+console.log(rest.get(true));
+console.log(rest.get(1));
+
+const time = 10;
+console.log(time > rest.get("open") && time < rest.get("close"));
+console.log(rest.has(1));
+console.log(rest.delete(1));
