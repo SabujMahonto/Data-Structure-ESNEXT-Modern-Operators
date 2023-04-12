@@ -149,3 +149,28 @@ console.log(station.slice(0,9));
 console.log(station.slice(10,20));
 console.log(station.slice(0, station.indexOf(" ")));
 console.log(station.slice(station.indexOf(" ") +1));
+console.log(station.slice(1,-1));
+// last index 
+// console.log(station.length(-1));
+// console.log(station.slice(-1));
+// console.log(station.at(-2));
+
+const checkWindowSet = function(seatNumber){
+    // w for  window set
+    // m for middle set
+    // c or cabin set 
+    const sliceSeatNum = seatNumber.slice(2,3);
+
+    console.log(sliceSeatNum);
+    if(sliceSeatNum === 'w'){
+        console.log( `Your set num is ${seatNumber} it's placed beside windows.`)
+    } else if (sliceSeatNum === 'm'){
+        console.log( `Your set num is ${seatNumber} it's placed middle.`)
+    }else{
+        console.log( `Your set num is ${seatNumber} it's a cabin set.`)
+    }
+    
+}
+checkWindowSet("22w111")
+checkWindowSet("65m118")
+checkWindowSet("95c191")
