@@ -136,3 +136,16 @@ const time = 10;
 console.log(time > rest.get("open") && time < rest.get("close"));
 console.log(rest.has(1));
 console.log(rest.delete(1));
+
+//* string method 
+const station = "Pahartoli station";
+const train = "P667"
+// console.log(train[0]);
+// console.log(station.length);
+// console.log("Pahartoli".length);
+
+//* slice(starting index or ending index)
+console.log(station.slice(0,9));
+console.log(station.slice(10,20));
+console.log(station.slice(0, station.indexOf(" ")));
+console.log(station.slice(station.indexOf(" ") +1));
