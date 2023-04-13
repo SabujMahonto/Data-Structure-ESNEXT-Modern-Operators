@@ -191,3 +191,15 @@ function fixCap(fastName ,lastName){
     return currentName;
 }
 console.log(fixCap("sabuj", "mahonto"));
+
+// replace
+const worryingMsg = "game name torjon.96";
+
+const correctMgs = worryingMsg.replaceAll(".96", " v68");
+console.log(correctMgs);
+
+function normalEmail(email){
+    const correctEmail = email.toLowerCase().trim();
+    return correctEmail;
+}
+console.log(normalEmail("  sABUjMAHOTOkd@gMail.com  "));
