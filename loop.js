@@ -145,11 +145,11 @@ const train = "P667"
 // console.log("Pahartoli".length);
 
 //* slice(starting index or ending index)
-console.log(station.slice(0,9));
-console.log(station.slice(10,20));
-console.log(station.slice(0, station.indexOf(" ")));
-console.log(station.slice(station.indexOf(" ") +1));
-console.log(station.slice(1,-1));
+// console.log(station.slice(0,9));
+// console.log(station.slice(10,20));
+// console.log(station.slice(0, station.indexOf(" ")));
+// console.log(station.slice(station.indexOf(" ") +1));
+// console.log(station.slice(1,-1));
 // last index 
 // console.log(station.length(-1));
 // console.log(station.slice(-1));
@@ -171,6 +171,23 @@ const checkWindowSet = function(seatNumber){
     }
     
 }
-checkWindowSet("22w111")
-checkWindowSet("65m118")
-checkWindowSet("95c191")
+// checkWindowSet("22w111")
+// checkWindowSet("65m118")
+// checkWindowSet("95c191")
+
+const starion2 = "Komolapur Station"
+
+console.log(starion2.toLowerCase());
+console.log(starion2.toUpperCase());
+
+// name conversion
+function fixCap(fastName ,lastName){
+    const lowerName = fastName.toLowerCase();// sabuj mahonto
+    const currentLowerName = lowerName.at(0).toUpperCase() + lowerName.slice(1);
+
+    const lastLowerName = lastName.toLowerCase();
+    const correctLastName = lastLowerName.at(0).toUpperCase() + lastLowerName.slice(1);
+    const currentName = `${currentLowerName} ${correctLastName}`;
+    return currentName;
+}
+console.log(fixCap("sabuj", "mahonto"));
