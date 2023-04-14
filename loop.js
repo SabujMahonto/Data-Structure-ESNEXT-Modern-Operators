@@ -203,3 +203,7 @@ function normalEmail(email){
     return correctEmail;
 }
 console.log(normalEmail("  sABUjMAHOTOkd@gMail.com  "));
+const jutaPrice = "500TK";
+const jutaPriceUSD = jutaPrice.replace("TK","$");
+console.log(jutaPrice);
+console.log(jutaPriceUSD);
