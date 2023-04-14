@@ -52,4 +52,26 @@ const sawmill = function(logs, fn){
 
 console.log(sawmill([12,12,12,14,2,] ,logCounter));
 console.log(sawmill([12,12,12,14,2,] ,logsCutter));
-//curring function
+// function returning function (curring function)
+
+
+function greet(greeting){
+    return function(name){
+        console.log(`${greeting}, ${name}`);
+    }
+}
+
+greet("good night") ("sabuj")
+
+function calVat(vat){
+    return function(price){
+        return price + price * vat;
+    }
+    
+}
+console.log(calVat(0.1) (100));
+
+// callback function 
+const callVatArrow = vat => price => price + price * vat;
+const totalPrice = callVatArrow(0.1);
+console.log(totalPrice(600));
