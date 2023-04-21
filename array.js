@@ -12,12 +12,12 @@ console.log(arr.at(-1));
 const arr2 = ["j", "k", "l", "m", "n", "o"];
 
 
-console.log(arr2.splice(2,5));
-console.log(arr2);
+// console.log(arr2.splice(2,5));
+// console.log(arr2);
 
-//reverse
+// //reverse
 const arr4 = [22, 44,12, 43,99,09,33,];
-console.log(arr4.reverse());
+// console.log(arr4.reverse());
 
 const arr3 =[33,22,66,44,33,77];
 // concat
@@ -44,9 +44,32 @@ const arrNew = [1980, 1990,1930,2000,2023];
 // console.log(arrNew[4]);
 // console.log(arrNew.at(4));
 
-console.log(arrNew[arrNew.length -1]);
-console.log(arrNew.slice(-1)[0]);
-console.log(arrNew.at(-1));
+// console.log(arrNew[arrNew.length -1]);
+// console.log(arrNew.slice(-1)[0]);
+// console.log(arrNew.at(-1));
 
 // console.log(arr0);
 
+// forEach -> (does not produce new Array)
+const numbers = [12,34,56,7,8,33,55,666,]
+//  for loop 
+for(let i = 0; i < numbers.length; i++){
+    // console.log(`${i + 1} ${numbers[i]}`);
+}
+
+
+// forEach doesn't support continue or break
+numbers.forEach(function(element, i, arr){
+    // console.log(`${i + 1} ${numbers[i]}`);
+})
+
+// numbers.forEach((num , i, arr) =>{
+//     console.log(`${i + 1} ${numbers[i]}`);
+// })
+numbers.forEach((n, i)=>console.log(numbers[i]))
+
+const friends = ['tumpa', 'rumpa', 'arpita','dipa','sangita']
+
+for(let i = 0; i < friends.length; i++){
+    console.log(`${friends[i ] }: index -->${i +1}}`);
+}
