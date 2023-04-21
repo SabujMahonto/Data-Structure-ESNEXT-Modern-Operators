@@ -22,9 +22,31 @@ console.log(arr4.reverse());
 const arr3 =[33,22,66,44,33,77];
 // concat
 const joinArr = arr3.concat(arr3)
-console.log(joinArr);
-console.log([...arr3, ...arr4]);
+// console.log(joinArr);
+// console.log([...arr3, ...arr4]);
 // join 
 const words = ["this", "is", "a", "nice", "day"];
-console.log(words.join(" "));
+// console.log(words.join(" "));
+
+// push, usShift, pop , shift, indexOf, includes,
+// const arr0 = [2,54,6,7,3,7,34,];
+// arr0.push(22)
+// arr0.unshift(99)
+// arr0.pop()
+// arr0.shift()
+// arr0.includes(6);
+// arr0.indexOf(33)
+// console.log(arr0.indexOf(2));
+// console.log(arr0.includes(2));
+
+// At 
+const arrNew = [1980, 1990,1930,2000,2023];
+// console.log(arrNew[4]);
+// console.log(arrNew.at(4));
+
+console.log(arrNew[arrNew.length -1]);
+console.log(arrNew.slice(-1)[0]);
+console.log(arrNew.at(-1));
+
+// console.log(arr0);
 
