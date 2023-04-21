@@ -129,3 +129,56 @@ const friendsArr = ["sabuj", "samir", "sumi", "arpi", "arpita", "dipa", "dipok",
 const friendWordS = friendsArr.filter((friend,i,arr)=>friend.startsWith("a"));
  
 console.log(friendWordS);
+
+
+// const color = ["white", "black", "blue", "green", "tomato","orange","pink", "crimson"];
+// for(let colors of color){
+//     let fav = colors[0].toUpperCase() + colors.slice(1)
+//     console.log(fav);
+// }
+
+// for(let i =0; i<color.length; i++){
+//   fav = color[i][0].toUpperCase() + color[i].slice(1)
+//   console.log(fav);
+// }
+
+
+// const favColor = color.map(color =>color[0].toLocaleUpperCase() + color.slice(1))
+// console.log(favColor);
+// const num = [20, 30,60,80,20,90,];
+
+// const newNum = num.map(n =>n -10)
+// console.log(newNum);
+
+// const color2 = ["white", "black", "blue", "green", "tomato","orange","pink", "crimson"];
+// const favColorT = color2.filter(color=>color.startsWith("t"));
+// console.log(favColorT);
+
+
+
+// * Reduce
+// const money = [20, 21,33,5,2,3,61,30,60,80,20,90,]
+// const balance = money.reduce((acc,value, i, arr)=>{
+//     // return acc + value 
+   
+ 
+// },0)
+
+// console.log(balance);
+const multi = [2,3,5,6,7,];
+const totalMulti = multi.reduce((acc,el, i , arr) =>acc* el,1)
+console.log(totalMulti);
+
+const numArr = [20, 21,33,5,2,3,61,30,60,80,20,90,]
+
+const maxNum = numArr.reduce((acc,el,i,arr)=>{
+    if(acc > el){
+        return acc
+    }else{
+        return el
+    }
+},numArr[0])
+
+console.log(maxNum);
+const minNum = numArr.reduce((acc,value)=>acc < value ? acc : value,numArr.at(0));
+console.log(minNum);
