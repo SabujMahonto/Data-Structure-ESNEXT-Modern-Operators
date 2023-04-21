@@ -194,7 +194,7 @@ const lastWithDrow = bankMoney.find(withdraw => withdraw < 0)
 
 console.log(lastWithDrow);
 
-//find
+//*find
 const student = [
     {name: "sabuj",id:29},
     {name:"somir", id:33},
@@ -205,10 +205,34 @@ const student = [
 const id44 = student.find(student=>student.id ===44)
 console.log(id44);
 
-// some and evry
+//* some and every
 const  arr00 = [29,15,48, 20,30];
 const getterNum40 = arr00.some((num)=>num >0)
-console.log(getterNum40);
+// console.log(getterNum40);
 
 const everyNum = arr00.every(num=>num > 10);
-console.log(everyNum);
+// console.log(everyNum);
+
+//*flat or flatMap
+const arr11 = [20,44,[30,53,],90,84,[22,99],55];
+// console.log(arr11.flat(1));
+const accounts = [
+    {
+        owner : "sabuj Mahonto",
+        movement : [200,-500,-300,300,500,900,-700],
+        
+    },
+    {
+        owner : "dipok roy",
+        movement : [1200,-1500,-1300,3200,5060,9030,-7100],
+        
+    },
+    {
+        owner : "mollika rani",
+        movement : [2600,-5300,-3090,3090,5300,9000,-7300],
+        
+    }
+]
+// const arrOfMovement = accounts.map(account => account.movement).flat()
+const arrOfMovement = accounts.flatMap(account => account.movement)
+console.log(arrOfMovement);
