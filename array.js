@@ -50,7 +50,7 @@ const arrNew = [1980, 1990,1930,2000,2023];
 
 // console.log(arr0);
 
-// forEach -> (does not produce new Array)
+// *forEach -> (does not produce new Array)
 const numbers = [12,34,56,7,8,33,55,666,]
 //  for loop 
 for(let i = 0; i < numbers.length; i++){
@@ -58,7 +58,7 @@ for(let i = 0; i < numbers.length; i++){
 }
 
 
-// forEach doesn't support continue or break
+//* forEach doesn't support continue or break
 numbers.forEach(function(element, i, arr){
     // console.log(`${i + 1} ${numbers[i]}`);
 })
@@ -71,5 +71,22 @@ numbers.forEach((n, i)=>console.log(numbers[i]))
 const friends = ['tumpa', 'rumpa', 'arpita','dipa','sangita']
 
 for(let i = 0; i < friends.length; i++){
-    console.log(`${friends[i ] }: index -->${i +1}}`);
+    // console.log(`${friends[i ] }: index -->${i +1}}`);
 }
+
+//* Map 
+const currency = new Map([
+    ["BDT","Bangladeshi Taka"],
+    ["USD", "United State Doller"],
+    ["EUR", "Euro"]
+    
+])
+currency.forEach((value, key,)=>console.log(`${key}: ${value},`));
+
+// set 
+
+const currencyUnic = new Set([11,22,22,11,55,66,67,3,3,4,54,54,5,32])
+
+currencyUnic.forEach((num,_,ar)=>{
+    console.log(num);
+})
