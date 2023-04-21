@@ -204,3 +204,11 @@ const student = [
 
 const id44 = student.find(student=>student.id ===44)
 console.log(id44);
+
+// some and evry
+const  arr00 = [29,15,48, 20,30];
+const getterNum40 = arr00.some((num)=>num >0)
+console.log(getterNum40);
+
+const everyNum = arr00.every(num=>num > 10);
+console.log(everyNum);
