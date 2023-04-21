@@ -85,8 +85,47 @@ currency.forEach((value, key,)=>console.log(`${key}: ${value},`));
 
 // set 
 
+
 const currencyUnic = new Set([11,22,22,11,55,66,67,3,3,4,54,54,5,32])
 
 currencyUnic.forEach((num,_,ar)=>{
     console.log(num);
 })
+
+
+// Array method Map(Return a new Array
+
+//* Map
+
+const currentMony = [3000,9000, 4000, 6000,7000];
+const vatMony = currentMony.map((mony, i, arr)=>mony + 100)
+// console.log(vatMony);
+// console.log(currentMony);
+
+//* filter
+
+const transduction = [5000, -3000, 4000, -3000, 9000, -5000];
+
+const depositeMoney = transduction.filter((money, i , arr)=>{
+    if(money > 0){
+        return transduction
+    }
+} )
+console.log(depositeMoney);
+const withdraw = transduction.filter((money,i,arr)=>money < 0  && money)
+console.log(withdraw);
+
+const numbersArr = [12,11,23,14,24,22,523,33,52,53];
+
+const oddNum = numbersArr.filter((num, i, arr)=>num % 2 !== 0)
+
+console.log(oddNum);
+
+const eventNum = numbersArr.filter((num, i , arr)=> num % 2 === 0);
+console.log(eventNum);
+
+const friendsArr = ["sabuj", "samir", "sumi", "arpi", "arpita", "dipa", "dipok","karim"];
+
+const friendWordS = friendsArr.filter((friend,i,arr)=>friend.startsWith("a"));
+ 
+console.log(friendWordS);
