@@ -208,7 +208,7 @@ console.log(id44);
 //* some and every
 const  arr00 = [29,15,48, 20,30];
 const getterNum40 = arr00.some((num)=>num >0)
-// console.log(getterNum40);
+// console.log(getterNum40); 
 
 const everyNum = arr00.every(num=>num > 10);
 // console.log(everyNum);
@@ -235,4 +235,28 @@ const accounts = [
 ]
 // const arrOfMovement = accounts.map(account => account.movement).flat()
 const arrOfMovement = accounts.flatMap(account => account.movement)
-console.log(arrOfMovement);
+// console.log(arrOfMovement);
+
+// *sorting (sort muted orginal array)
+const studentArr = ["rina", "bina","dipok","dipika", "arpita","sabuj","abuj"]
+// console.log(studentArr.sort());
+
+const alphabet = ["g", "f", "e","d","c","b,",'a']
+
+// console.log(alphabet.sort());
+
+const arr22 = [8,5,3,2,1,0]
+// console.log(arr22.sort());
+const arrr = [222,111,4444,333,666,0009,3388,]
+
+const ascending = arrr.sort((a,b)=>{
+    return  a>b ?1 : -1;
+}) 
+// const ascending = arrr.sort((a,b)=>a-b)
+
+const descending = arrr.sort((a,b)=>{
+    return a > b ?-1 : 1;
+})
+// const descending = arrr.sort((a,b)=>b-a)
+console.log(ascending);
+console.log(descending);
