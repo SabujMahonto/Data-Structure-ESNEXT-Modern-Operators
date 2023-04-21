@@ -182,3 +182,25 @@ const maxNum = numArr.reduce((acc,el,i,arr)=>{
 console.log(maxNum);
 const minNum = numArr.reduce((acc,value)=>acc < value ? acc : value,numArr.at(0));
 console.log(minNum);
+
+//* Data Transformation pipeline
+
+const bankMoney = [8000,-3000,20000,4000,-40000,39990, 36995,-98454];
+
+const deposit = bankMoney.filter((deposit)=>deposit >=10000).map(deposit =>deposit /2).filter(money=>money >=10000).reduce((acc,value,i, arr)=>acc + value,0);
+
+const lastWithDrow = bankMoney.find(withdraw => withdraw < 0)
+
+
+console.log(lastWithDrow);
+
+//find
+const student = [
+    {name: "sabuj",id:29},
+    {name:"somir", id:33},
+    {name:"korim",id:22,},
+    {name: "sagor", id:44}
+]
+
+const id44 = student.find(student=>student.id ===44)
+console.log(id44);
